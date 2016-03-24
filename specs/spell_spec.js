@@ -38,4 +38,10 @@ describe("spell", function(){
     assert.deepEqual(rat1, spell3.spawnRat("giant rat", Rat))
   });
 
+  it("should not spawn a rat if spell name is incorrect", function(){
+    assert.equal("Need more args", spell1.spawnRat("black rat", Rat))
+  });
+
+
+
 });
