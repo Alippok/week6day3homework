@@ -3,13 +3,17 @@ var Spell = require('../spell.js');
 var Hero = require('../hero_play.js');
 var Food = require('../food.js');
 
-var spell1 = new Spell("avada kedavra")
+var spell1 = new Spell("velstrum", 30)
 
 
 describe("spell", function(){
 
   it("should have a name", function(){
-    assert.equal("avada kedavra", spell1.name)
+    assert.equal("velstrum", spell1.name)
+  });
+
+  it("should have a damage value", function(){
+    assert.equal(30, spell1.damage)
   });
 
 
