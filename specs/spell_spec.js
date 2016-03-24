@@ -20,12 +20,12 @@ describe("spell", function(){
   });
 
   it("should be able to not take a damage value", function(){
-    var spell2 = new Spell("terra leveria")
+    var spell2 = new Spell("Terra Leveria")
     assert.equal(null, spell2.damage)
   });
 
   it("should have an option to create an object", function(){
-    var spell2 = new Spell("terra leveria")
+    var spell2 = new Spell("Terra Leveria")
     assert.deepEqual(food1, spell2.create("shrub", 30, Food))
   });
 
@@ -33,8 +33,9 @@ describe("spell", function(){
     assert.equal("Need more args", spell1.create("berry", 10, Food))
   });
 
-  // it("should spawn a rat if spell name is 'rattusCreo'", function(){
-  //   assert.equal 
-  // });
+  it("should spawn a rat if spell name is 'Rattus Creo'", function(){
+    var spell3 = new Spell("Rattus Creo")
+    assert.deepEqual(rat1, spell3.spawnRat("giant rat", Rat))
+  });
 
 });

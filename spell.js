@@ -7,16 +7,21 @@ var Spell = function(name, damage){
 
 Spell.prototype = {
   create: function(foodName, replenishValue, foodConstructor){
-    if ("terra leveria" === this.name){
+    if (this.name === "Terra Leveria" ){
       var food = new foodConstructor(foodName, replenishValue);
       return food;
     } else  {
       return "Need more args"
     }
+  },
+  spawnRat: function(type, ratConstructor){
+    if (this.name === "Rattus Creo"){
+      var rat = new ratConstructor(type);
+      return rat;
+    } else { 
+      return "Need more args";
+    }
   }
-  // spawnRat: function(name, type, ratConstructor){
-  //   if (name === "")
-  // }
 };
 
 
