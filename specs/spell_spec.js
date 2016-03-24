@@ -26,11 +26,15 @@ describe("spell", function(){
 
   it("should have an option to create an object", function(){
     var spell2 = new Spell("terra leveria")
-    assert.equal = (food1, spell2.create("shrub", 30, Food))
+    assert.deepEqual(food1, spell2.create("shrub", 30, Food))
   });
 
   it("should not create a food if spell name is incorrect", function(){
-    assert.equal = ("Need more args", spell1.create("berry", 10, Food))
+    assert.equal("Need more args", spell1.create("berry", 10, Food))
   });
+
+  // it("should spawn a rat if spell name is 'rattusCreo'", function(){
+  //   assert.equal 
+  // });
 
 });
