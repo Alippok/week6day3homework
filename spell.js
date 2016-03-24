@@ -6,8 +6,8 @@ var Spell = function(name, damage){
 }
 
 Spell.prototype = {
-  create: function(name,foodName, replenishValue, foodConstructor){
-    if (name === "terra leveria"){
+  create: function(foodName, replenishValue, foodConstructor){
+    if ("terra leveria" === this.name){
       var food = new foodConstructor(foodName, replenishValue);
       return food;
     } else  {
