@@ -16,6 +16,10 @@ describe("spell", function(){
     assert.equal(30, spell1.damage)
   });
 
+  it("should be able to not take a damage value", function(){
+    var spell2 = new Spell("terra leveria")
+    assert.equal(null, spell2.damage)
+  })
 
 
 });
